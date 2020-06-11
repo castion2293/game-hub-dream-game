@@ -1,0 +1,48 @@
+{
+  "name": "super-station/gamehub-dream_game",
+  "description": "遊戲驅動器 - DG",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Nick"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/Users/user/Documents/super-station/code/packages/GameHub"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "jenssegers/mongodb": "dev-develop",
+    "super-station/gamehub": "dev-master"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^5.0",
+    "phpunit/phpunit": "^8.2",
+    "paquettg/php-html-parser": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "SuperStation\\Gamehub\\DreamGame\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SuperStation\\Gamehub\\DreamGame\\Tests\\": "tests/",
+      "SuperStation\\Gamehub\\DreamGame\\Tests\\Multiple\\": "tests/multiple/",
+      "SuperStation\\Gamehub\\DreamGame\\Tests\\Single\\": "tests/single/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SuperStation\\Gamehub\\DreamGame\\VendorServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  }
+}
